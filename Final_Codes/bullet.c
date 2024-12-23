@@ -130,6 +130,10 @@ void drawBulletList(BulletNode * dummyhead, Point camera){
 }
 
 void destroyBulletList(BulletNode * dummyhead){
+    BulletNode* del = dummyhead;
+    dummyhead = dummyhead->next;
+    free(del); // No Images
+
     while(dummyhead != NULL){
         BulletNode * del = dummyhead;
         dummyhead = dummyhead->next;
